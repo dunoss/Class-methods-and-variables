@@ -13,11 +13,13 @@ class Book
   def self.overdue_books
   end
   def self.browse
+    @@on_shelf.sample
   end
   def self.available
     @@on_shelf
   end
   def self.borrowed
+    @@on_loan
   end
 
 
