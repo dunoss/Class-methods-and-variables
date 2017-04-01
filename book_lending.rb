@@ -2,10 +2,10 @@
 
 class Book
 
-  def self.create
-    new_book = self.new
+  def self.create(title, author, isbn)
+    new_book = self.new(title, author, isbn)
     @@on_shelf << new_book
-    return new_book
+    new_book
   end
 
   def self.current_due_date
@@ -43,13 +43,6 @@ class Book
   def lent_out?
 
   end
-
-
-
-
-
-
-
 
 
 end
