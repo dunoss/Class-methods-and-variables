@@ -35,7 +35,7 @@ class Book
   end
 
   def borrow
-
+    @@on_loan << self
   end
 
   def return_to_library
@@ -44,7 +44,12 @@ class Book
 
   def lent_out?
 
+    if Book.borrowed.include?( self )
+    return true
+  else
+    return false
   end
 
+end
 
 end
